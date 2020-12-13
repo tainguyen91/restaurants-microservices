@@ -3,6 +3,7 @@ package com.restaurant.infoservice.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.restaurant.infoservice.model.Infoservicemodel;
@@ -29,4 +30,10 @@ public class Infoservicecontroller {
 		
 		return infoservicemodel;
 	}
+	
+	@RequestMapping("/")
+	public @ResponseBody String greeting() {
+		return "Hello, World";
+	}
+
 }
